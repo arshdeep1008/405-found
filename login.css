@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.masterContainer {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Login Box Styles */
+#loginbox {
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 550px;
+}
+
+.boxArea {
+    flex: 1;
+}
+
+/* Graphic Side */
+#graphic {
+    background: linear-gradient(135deg, #7e57c2 0%, #5e35b1 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    padding: 30px;
+}
+
+#graphic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,100 L0,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+    background-size: 100% 100%;
+}
+
+#graphicImage {
+    width: 85%;
+    max-width: 320px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+#graphicImage:hover {
+    transform: scale(1.03);
+}
+
+#graphic p {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 25px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Login Area */
+#LoginArea {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#loginForm {
+    width: 100%;
+}
+
+.boxItems {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.boxItems img {
+    max-width: 130px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.boxItems img:hover {
+    transform: translateY(-5px);
+}
+
+.boxItems p {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 35px;
+    font-weight: 500;
+}
+
+.inputs {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #444;
+    font-size: 0.95rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #7e57c2;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(126, 87, 194, 0.2);
+    background-color: #fff;
+}
+
+#submitButton {
+    width: 100%;
+    padding: 14px;
+    background-color: #7e57c2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    margin-top: 15px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(126, 87, 194, 0.3);
+}
+
+#submitButton:hover {
+    background-color: #6a46b5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(126, 87, 194, 0.4);
+}
+
+#submitButton:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(126, 87, 194, 0.3);
+}
+
+#log-on {
+    margin-top: 35px;
+    text-align: center;
+}
+
+#log-on p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    color: #666;
+}
+
+#log-on a {
+    color: #7e57c2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    padding: 2px;
+}
+
+#log-on a:hover {
+    color: #5e35b1;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #loginbox {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    #graphic {
+        padding: 40px 20px;
+    }
+    
+    #graphicImage {
+        max-width: 220px;
+    }
+    
+    .masterContainer {
+        width: 92%;
+    }
+    
+    #LoginArea {
+        padding: 35px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    #graphic p {
+        font-size: 1.1rem;
+    }
+    
+    .boxItems p {
+        font-size: 1.4rem;
+    }
+    
+    #LoginArea {
+        padding: 30px 20px;
+    }
+}
